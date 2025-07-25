@@ -1,0 +1,94 @@
+---
+test-cases:
+  - summary: |
+      Проверка смены языка интерфейса
+    status: fail
+
+  - summary: |
+      Товар и информация о товаре
+    status: pass
+
+ - summary: |
+      Поиск по ключевому слову
+    status: pass
+
+ - summary: |
+      Поиск по категории
+    status: fail
+
+ - summary: |
+      Фильтрация товаров
+    status: fail
+
+- summary: |
+      Добавление товаров в корзину и её просмотр 
+    status: pass
+
+- summary: |
+      Название, рейтинг, цена со скидкой и без неё
+    status: pass
+
+- summary: |
+      Просмотр каталога при добавлении товара в корзину
+    status: pass
+
+- summary: |
+      Удаление товара из корзины
+    status: pass
+
+- summary: |
+      Оплата заказа
+    status: fail
+
+bugreports:
+  - summary: |
+      Проверка смены языка интерфейса
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    steps-to-reproduce: |
+      - Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      - Нажать кнопку "Language"
+      - Нажать кнопку "Russia"
+    expected-result: |
+      Описание товара и название категорий должны перевестись на русский язык
+    actual-result: |
+      Описание и название категорий остаются на английском
+
+bugreports:
+  - summary: |
+      Поиск по категории
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    steps-to-reproduce: |
+      - Нажать кнопку "Категория"
+    expected-result: |
+      При смене страницы каталога все категории должны оставаться
+    actual-result: |
+      При смене страницы каталога, категории меняются на те, которые представлены на странице
+
+bugreports:
+  - summary: |
+      Оплата заказа
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/cart
+    steps-to-reproduce: |
+      - Выбрать товар
+      - Нажать "В корзину"
+      - Нажать "Корзина"
+      - Нажать "Оформить заказ"
+    expected-result: |
+      Сайт автоматически открывает страницу оплаты
+    actual-result: |
+      На сайте появляется окно "Заказ успешно оформлен". Сайт не открывает страницу оплаты
+
+bugreports:
+  - summary: |
+      Кнопка "Закрыть"
+    environment: |
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/cart
+    steps-to-reproduce: |
+      - Нажать на "крестик"
+    expected-result: |
+      Всплывающее окно должно закрыться
+    actual-result: |
+      Всплывающее окно не закрывается
