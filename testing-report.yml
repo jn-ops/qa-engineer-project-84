@@ -1,0 +1,40 @@
+---
+- summary: |
+   Проверка смены языка интерфейса 
+  status: fail
+
+- summary: |
+    Товар и информация о товаре
+  status: pass
+
+- summary: |
+    Поиск по ключевому слову
+  status: pass
+
+- summary: |
+    Поиск по категории
+  status: fail
+
+- summary: |
+    Фильтрация товаров
+  status: pass
+
+- summary: |
+    Добавление товаров в корзину и её промотр 
+  status: pass
+
+- summary: |
+    Название, рейтинг, цена со скидкой и без неё
+  status: pass
+
+- summary: |
+    Просмотр каталога при добавлении товара в корзину
+  status: pass
+
+- summary: |
+    Удаление товара из корзины
+  status: pass
+
+- summary: |
+    Оплата заказа
+  status: fail
