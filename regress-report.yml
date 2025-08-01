@@ -4,19 +4,19 @@ test-cases:
       Проверка смены языка интерфейса
     status: fail
 
-  - summary: |
+- summary: |
       Товар и информация о товаре
     status: pass
 
- - summary: |
+- summary: |
       Поиск по ключевому слову
     status: pass
 
- - summary: |
+- summary: |
       Поиск по категории
     status: fail
 
- - summary: |
+- summary: |
       Фильтрация товаров
     status: fail
 
@@ -41,7 +41,7 @@ test-cases:
     status: fail
 
 bugreports:
-  - summary: |
+ - summary: |
       Проверка смены языка интерфейса
     environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
@@ -55,7 +55,7 @@ bugreports:
       Описание и название категорий остаются на английском
 
 bugreports:
-  - summary: |
+ - summary: |
       Поиск по категории
     environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
