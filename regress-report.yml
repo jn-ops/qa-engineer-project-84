@@ -1,31 +1,39 @@
 ---
 test-cases:
   - summary: |
-      Проверка смены языка интерфейса
+      Смена языка интерфейса на русский 
     status: fail
 
   - summary: |
+      Смена языка на английский
+      status: pass
+
+  - summary: |
       Товар и информация о товаре
-    status: pass
+      status: pass
 
   - summary: |
       Поиск по ключевому слову
-    status: pass
+      status: fail
 
   - summary: |
       Поиск по категории
       status: fail
 
   - summary: |
-      Фильтрация товаров
+      Фильтрация товаров по производителю
       status: fail
 
   - summary: |
-      Добавление товаров в корзину и её просмотр
+      Добавление товара в корзину и её просмотр
       status: pass
 
   - summary: |
-      Название, рейтинг, цена со скидкой и без неё
+      Добавление одинаковых товаров в корзину и её просмотр
+      status: pass
+
+  - summary: |
+      Добавление разных товаров в корзину и её просмотр
       status: pass
 
   - summary: |
@@ -40,52 +48,46 @@ test-cases:
       Оплата заказа
       status: fail
 
+  - summary: |
+      Общее отображение товаров в каталоге
+      status: pass
+
+  - summary: |
+      Фильтр по цене
+      status: fail
+
+  - summary: |
+      Фильтр в наличии
+      status: pass
+
+  - summary: |
+      Продолжение покупок из корзины
+      status: pass
+
+  - summary: |
+      Хэштег категории
+      status: pass
+
+  - summary: |
+      Адаптивная верстка
+      status: fail
+
+  - summary: |
+      Негативная проферка строки поиска
+      status: fail
+
+  - summary: |
+      Закрытие окна заказа
+      status: fail
+
 bugreports:
   - summary: |
-      Проверка смены языка интерфейса
+      Фильтр цены работает некорректно
       environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       steps-to-reproduce: |
-      - Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      - Нажать кнопку "Language"
-      - Нажать кнопку "Russia"
+      - Выставить цену от 0 до 0
       expected-result: |
-      Описание товара и название категорий должны перевестись на русский язык
+      Сайт не находит товары
       actual-result: |
-      Описание и название категорий остаются на английском
-
-  - summary: |
-      Поиск по категории
-      environment: |
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      steps-to-reproduce: |
-      - Нажать кнопку "Категория"
-      expected-result: |
-      При смене страницы каталога все категории должны оставаться
-      actual-result: |
-      При смене страницы каталога, категории меняются на те, которые представлены на странице
-
-  - summary: |
-      Оплата заказа
-    environment: |
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/cart
-    steps-to-reproduce: |
-      - Выбрать товар
-      - Нажать "В корзину"
-      - Нажать "Корзина"
-      - Нажать "Оформить заказ"
-    expected-result: |
-      Сайт автоматически открывает страницу оплаты
-    actual-result: |
-      На сайте появляется окно "Заказ успешно оформлен". Сайт не открывает страницу оплаты
-
-  - summary: |
-      Кнопка "Закрыть"
-    environment: |
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/cart
-    steps-to-reproduce: |
-      - Нажать на "крестик"
-    expected-result: |
-      Всплывающее окно должно закрыться
-    actual-result: |
-      Всплывающее окно не закрывается
+      На сайте остаются товары не соответствующие ценовым рамкам
