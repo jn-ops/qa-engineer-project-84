@@ -4,69 +4,67 @@ test-cases:
       Проверка смены языка интерфейса
     status: fail
 
-- summary: |
+  - summary: |
       Товар и информация о товаре
     status: pass
 
-- summary: |
+  - summary: |
       Поиск по ключевому слову
     status: pass
 
-- summary: |
+  - summary: |
       Поиск по категории
-    status: fail
+      status: fail
 
-- summary: |
+  - summary: |
       Фильтрация товаров
-    status: fail
+      status: fail
 
-- summary: |
-      Добавление товаров в корзину и её просмотр 
-    status: pass
+  - summary: |
+      Добавление товаров в корзину и её просмотр
+      status: pass
 
-- summary: |
+  - summary: |
       Название, рейтинг, цена со скидкой и без неё
-    status: pass
+      status: pass
 
-- summary: |
+  - summary: |
       Просмотр каталога при добавлении товара в корзину
-    status: pass
+      status: pass
 
-- summary: |
+  - summary: |
       Удаление товара из корзины
-    status: pass
+      status: pass
 
-- summary: |
+  - summary: |
       Оплата заказа
-    status: fail
+      status: fail
 
 bugreports:
- - summary: |
+  - summary: |
       Проверка смены языка интерфейса
-    environment: |
+      environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    steps-to-reproduce: |
+      steps-to-reproduce: |
       - Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       - Нажать кнопку "Language"
       - Нажать кнопку "Russia"
-    expected-result: |
+      expected-result: |
       Описание товара и название категорий должны перевестись на русский язык
-    actual-result: |
+      actual-result: |
       Описание и название категорий остаются на английском
 
-bugreports:
- - summary: |
+  - summary: |
       Поиск по категории
-    environment: |
+      environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    steps-to-reproduce: |
+      steps-to-reproduce: |
       - Нажать кнопку "Категория"
-    expected-result: |
+      expected-result: |
       При смене страницы каталога все категории должны оставаться
-    actual-result: |
+      actual-result: |
       При смене страницы каталога, категории меняются на те, которые представлены на странице
 
-bugreports:
   - summary: |
       Оплата заказа
     environment: |
@@ -81,7 +79,6 @@ bugreports:
     actual-result: |
       На сайте появляется окно "Заказ успешно оформлен". Сайт не открывает страницу оплаты
 
-bugreports:
   - summary: |
       Кнопка "Закрыть"
     environment: |
