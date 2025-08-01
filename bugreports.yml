@@ -1,6 +1,6 @@
 ---
 - summary: |
-    Проверка смены языка интерфейса
+    Неполный перевод интерфейса на русский язык
   environment: |
     https://hexlet-products-store.vercel.app/
   steps-to-reproduce: |
@@ -13,7 +13,7 @@
     Описание товара и название категорий остаются на английском языке
 
 - summary: |
-    Поиск по категории
+    При смене страницы каталога категории меняются
   environment: |
     https://hexlet-products-store.vercel.app/
   steps-to-reproduce: |
@@ -24,21 +24,32 @@
     При смене страницы каталога, категории меняются на те, товары которых представлены на странице
 
 - summary: |
-    Оплата заказа
+    При смене страницы каталога производители меняются
+  environment: |
+    https://hexlet-products-store.vercel.app/
+  steps-to-reproduce: |
+    - Нажать кнопку "Производитель"
+  expected-result: |
+    При смене страницы каталога, все производители должны оставаться 
+  actual-result: |
+    При смене страницы каталога, производители меняются на те, товары которых представлены на странице
+
+- summary: |
+    Сайт не открывает страницу оплаты
   environment: |
     https://hexlet-products-store.vercel.app/cart
   steps-to-reproduce: |
     - Выбрать товар
     - Нажать "В корзину"
     - Нажать "Корзина"
-    Нажать "Оформить заказ"
+    - Нажать "Оформить заказ"
   expected-result: |
     Сайт автоматически открывает страницу оплаты 
   actual-result: |
     На сайте появляется окно "Заказ успешно оформлен". Сайт не открывает страницу оплаты 
 
 - summary: |
-    Кнопка "Закрыть
+    Кнопка "крестик" не работает при оформлении заказа 
   environment: |
     https://hexlet-products-store.vercel.app/cart
   steps-to-reproduce: |
@@ -49,7 +60,7 @@
     Всплывающее окно не закрывается
 
 - summary: |
-    Картинка флага
+    Нет картинки флага
   environment: |
     https://hexlet-products-store.vercel.app/
   steps-to-reproduce: |
@@ -58,3 +69,37 @@
     Рядом с "English" должна быть картинка флага
   actual-result: |
    Рядом с "English" нет картинки
+
+- summary: |
+    Фильтр "В наличии" работает некорректно
+  environment: |
+    https://hexlet-products-store.vercel.app/
+  steps-to-reproduce: |
+   - Нажать на "В наличии"
+  expected-result: |
+    Должны остаться все товары из каталога
+  actual-result: |
+   Товаров нет, сайт ничего не находит
+
+- summary: |
+    Хэштег категории не переводит на категорию
+  environment: |
+    https://hexlet-products-store.vercel.app/
+  steps-to-reproduce: |
+   - Нажать на товар
+   - Нажать на хэштег
+  expected-result: |
+    Сайт должен автоматически перевести на страницу с категорией хэштега
+  actual-result: |
+   На сайте ничего не происходит
+
+- summary: |
+    Сайт должен быть с адаптивной версткой
+  environment: |
+    https://hexlet-products-store.vercel.app/
+  steps-to-reproduce: |
+   - Зайти на сайт с любого мобильного устройства
+  expected-result: |
+    На мобильном устройстве используется подходящая верстка 
+  actual-result: |
+   Верстка не изменилась
