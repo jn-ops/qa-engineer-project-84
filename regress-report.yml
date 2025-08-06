@@ -6,88 +6,88 @@ test-cases:
 
   - summary: |
       Смена языка на английский
-      status: pass
+    status: pass
 
   - summary: |
       Товар и информация о товаре
-      status: pass
+    status: pass
 
   - summary: |
       Поиск по ключевому слову
-      status: fail
+    status: fail
 
   - summary: |
       Поиск по категории
-      status: fail
+    status: fail
 
   - summary: |
       Фильтрация товаров по производителю
-      status: fail
+    status: fail
 
   - summary: |
       Добавление товара в корзину и её просмотр
-      status: pass
+    status: pass
 
   - summary: |
       Добавление одинаковых товаров в корзину и её просмотр
-      status: pass
+    status: pass
 
   - summary: |
       Добавление разных товаров в корзину и её просмотр
-      status: pass
+    status: pass
 
   - summary: |
       Просмотр каталога при добавлении товара в корзину
-      status: pass
+    status: pass
 
   - summary: |
       Удаление товара из корзины
-      status: pass
+    status: pass
 
   - summary: |
       Оплата заказа
-      status: fail
+    status: fail
 
   - summary: |
       Общее отображение товаров в каталоге
-      status: pass
+    status: pass
 
   - summary: |
       Фильтр по цене
-      status: fail
+    status: fail
 
   - summary: |
       Фильтр в наличии
-      status: pass
+    status: pass
 
   - summary: |
       Продолжение покупок из корзины
-      status: pass
+    status: pass
 
   - summary: |
       Хэштег категории
-      status: pass
+    status: pass
 
   - summary: |
       Адаптивная верстка
-      status: fail
+    status: fail
 
   - summary: |
       Негативная проферка строки поиска
-      status: fail
+    status: fail
 
   - summary: |
       Закрытие окна заказа
-      status: fail
+    status: fail
 
 bugreports:
   - summary: |
       Фильтр цены работает некорректно
-      environment: |
+    environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      steps-to-reproduce: |
+    steps-to-reproduce:
       - Выставить цену от 0 до 0
-      expected-result: |
+    expected-result: |
       Сайт не находит товары
-      actual-result: |
+    actual-result: |
       На сайте остаются товары не соответствующие ценовым рамкам
