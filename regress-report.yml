@@ -85,8 +85,8 @@ bugreports:
       Фильтр цены работает некорректно
     environment: |
       https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-    steps-to-reproduce:
-      - Выставить цену от 0 до 0
+    steps-to-reproduce: |
+      Выставить цену от 0 до 0
     expected-result: |
       Сайт не находит товары
     actual-result: |
