@@ -5,7 +5,7 @@
 
 - summary: |
     Проверка смены языка на английский 
-  status: pass
+  status: fail
 
 - summary: |
     Товар и информация о товаре
@@ -49,7 +49,7 @@
 
 - summary: |
     Общее отображение товаров в каталоге
-  status: pass
+  status: fail
 
 - summary: |
     Фильтр по цене
@@ -79,4 +79,6 @@
     Закрытие окна заказа
   status: fail
 
-
+- summary: |
+    Оформление заказа
+  status: fail
